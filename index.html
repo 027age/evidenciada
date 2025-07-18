@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>evidenced</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body class="index">
+  <nav>
+    <h1>EVIDENCED</h1>
+  </nav>
+
+  <main class="contenedor">
+    <div class="seccion" onclick="location.href='Texturas.html'">
+      <img src="fotos_sueltas_varias/texturas/textura1.webp" alt="Texturas" />
+      <p>TEXTURAS</p>
+    </div>
+    <div class="seccion" onclick="location.href='Fechas.html'">
+      <img src="fotos_sueltas_varias/fechas/f1.webp" alt="Fechas" />
+      <p>FECHAS</p>
+    </div>
+    <div class="seccion" onclick="location.href='Cementerios.html'">
+      <img src="fotos_sueltas_varias/cementerios/c1.webp" alt="Cementerios" />
+      <p>CEMENTERIO/S/</p>
+    </div>
+    <div class="seccion" onclick="location.href='Flores.html'">
+      <img src="fotos_sueltas_varias/flores/fl9.webp" alt="Flores" />
+      <p>FLORES</p>
+    </div>
+    <div class="seccion" onclick="location.href='Produccion.html'">
+      <img src="fotos_sueltas_varias/produccion/p1.webp" alt="Produccion" />
+      <p>PROD.</p>
+    </div>
+    <div class="seccion" onclick="location.href='Elproceso.html'">
+      <img src="fotos_sueltas_varias/elproceso/ep1.webp" alt="Seccion 6" />
+      <p>EL PROCESO</p>
+    </div>
+  </main>
+  <section class="contacto" style="max-width:700px;margin:60px auto 40px auto;padding:2rem 1rem;background:#181818;border-radius:24px;box-shadow:0 0 24px #0004;">
+    <h2 style="font-size:2rem;margin-bottom:1rem;color:#fff;">Contacto</h2>
+    <form action="https://formspree.io/f/mnnznpgb" method="POST" style="display:flex;flex-direction:column;gap:1.2rem;">
+      <input type="text" name="nombre" placeholder="Tu nombre" required style="padding:0.7rem 1rem;border-radius:8px;border:none;font-size:1rem;" />
+      <input type="email" name="email" placeholder="Tu email" required style="padding:0.7rem 1rem;border-radius:8px;border:none;font-size:1rem;" />
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="5" required style="padding:0.7rem 1rem;border-radius:8px;border:none;font-size:1rem;"></textarea>
+      <button type="submit" style="background:linear-gradient(90deg,#3a8dde,#6be585);color:#fff;font-weight:bold;padding:0.9rem 1.5rem;border:none;border-radius:8px;font-size:1.1rem;cursor:pointer;">Enviar</button>
+    </form>
+  </section>
+</body>
+</html>

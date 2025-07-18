@@ -1,0 +1,507 @@
+@font-face {
+  font-family: 'MonumentExtended';
+  src: url('fonts/MonumentExtended-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Mostrar el título en una sola línea en PC y en dos líneas en mobile */
+.solo-pc { display: inline; }
+.solo-mobile { display: none; }
+@media (max-width: 700px) {
+  .solo-pc { display: none !important; }
+  .solo-mobile { display: inline !important; }
+  html, body {
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+  }
+  
+  body:not(.index) {
+    overflow-y: hidden !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+
+  .contenedor {
+    max-width: 100vw;
+    padding: 0;
+    gap: 0px;
+    margin: 0 auto 0 auto;
+    min-height: 0;
+  }
+  .seccion {
+    max-width: 98vw;
+    border-radius: 18px;
+    padding: 0 0 0 0;
+  }
+  .seccion img {
+    width: 100vw;
+    min-height: 60vh;
+    max-height: 80vh;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0;
+    display: block;
+  }
+  .seccion p {
+    font-size: 1.2rem !important;
+    margin: 0.7rem 0 0 0.7rem;
+    text-align: left;
+  }
+  .carrusel {
+    max-width: 100vw;
+    height: 65vh;
+    min-height: 45vh;
+    margin: 0 auto 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0;
+    position: relative;
+  }
+  .carrusel-imagen {
+    max-height: 65vh;
+    min-height: 45vh;
+    width: 100vw;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+  .carrusel-flechas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 24px;
+  }
+  .arrow {
+    width: 36px;
+    height: 36px;
+    left: 8px;
+    right: 8px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .arrow {
+    width: 36px;
+    height: 36px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    margin: 18px 12px 0 12px;
+    z-index: 2;
+    background: rgba(30,30,30,0.7);
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    font-size: 2.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 12px #0008;
+    outline: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+  .arrow.left {
+    left: auto;
+    right: auto;
+  }
+  .arrow.right {
+    right: auto;
+    left: auto;
+  }
+  .miniaturas-carrusel img {
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+  }
+  section.contacto {
+    max-width: 99vw !important;
+    margin: 18px auto 18px auto !important;
+    padding: 1.2rem 0.2rem !important;
+    border-radius: 14px !important;
+    box-shadow: 0 0 12px #0006 !important;
+  }
+  section.contacto h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  section.contacto form {
+    gap: 0.7rem !important;
+  }
+  section.contacto input,
+  section.contacto textarea {
+    font-size: 0.98rem !important;
+    padding: 0.5rem 0.7rem !important;
+    border-radius: 6px !important;
+  }
+  section.contacto button {
+    font-size: 1rem !important;
+    padding: 0.7rem 1.1rem !important;
+    border-radius: 6px !important;
+  }
+}
+@media (max-width: 700px) {
+  nav a[href="index.html"] img,
+  nav a[href='index.html'] img {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    margin-left: 0 !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+  }
+  nav[style*="display:flex"] {
+    min-height: 48px !important;
+  }
+  nav h1 {
+    font-size: 1.2rem !important;
+    line-height: 1.1;
+  }
+}
+/* Adaptación móvil */
+@media (max-width: 700px) {
+  nav {
+    padding: 0.5rem 0.2rem;
+    min-height: 56px !important;
+  }
+  body.index nav h1 {
+    font-size: 2.2rem !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+  nav h1 {
+    font-size: 1.3rem !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contenedor {
+    max-width: 100vw;
+    padding: 0 0vw;
+    gap: 10px;
+    margin: 0 auto 0 auto !important;
+    min-height: 0;
+  }
+  .seccion {
+    max-width: 98vw;
+    border-radius: 18px;
+    padding: 0.1rem 0 0 0;
+  }
+  .seccion img {
+    width: 100vw;
+    min-height: 60vh;
+    max-height: 80vh;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 0 0 0;
+    display: block;
+  }
+  .seccion p {
+    font-size: 1.2rem !important;
+    margin: 0.7rem 0 0 0.7rem;
+    text-align: left;
+  }
+  .carrusel {
+    max-width: 100vw;
+    height: 80vh;
+    min-height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carrusel-imagen {
+    max-height: 80vh;
+    min-height: 60vh;
+    width: 100vw;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+  .arrow {
+    width: 36px;
+    height: 36px;
+    left: 0;
+    right: 0;
+  }
+  .arrow.left {
+    left: -18px;
+  }
+  .arrow.right {
+    right: -18px;
+  }
+  .miniaturas-carrusel img {
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+  }
+  section.contacto {
+    max-width: 99vw !important;
+    margin: 18px auto 18px auto !important;
+    padding: 1.2rem 0.2rem !important;
+    border-radius: 14px !important;
+    box-shadow: 0 0 12px #0006 !important;
+  }
+  section.contacto h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  section.contacto form {
+    gap: 0.7rem !important;
+  }
+  section.contacto input,
+  section.contacto textarea {
+    font-size: 0.98rem !important;
+    padding: 0.5rem 0.7rem !important;
+    border-radius: 6px !important;
+  }
+  section.contacto button {
+    font-size: 1rem !important;
+    padding: 0.7rem 1.1rem !important;
+    border-radius: 6px !important;
+  }
+}
+/* Carrusel principal */
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 650px;
+  justify-content: center;
+}
+
+.carrusel-imagen {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 32px;
+  background: #111;
+  box-shadow: 0 0 32px 0 rgba(0,0,0,0.25);
+  display: block;
+  margin: 0 auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30,30,30,0.7);
+  border: none;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: auto;
+  user-select: none;
+  box-shadow: 0 2px 12px #0008;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  outline: none;
+}
+.arrow.left {
+  left: -60px;
+}
+.arrow.right {
+  right: -60px;
+}
+.arrow:hover {
+  background: rgba(60,60,60,0.95);
+  color: #b3e5fc;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.miniaturas-carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+.miniaturas-carrusel img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.6;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity 0.2s, border 0.2s;
+}
+.miniaturas-carrusel img.selected {
+  opacity: 1;
+  border: 2px solid #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --portada-font-size: 2.2rem;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  padding-top: 0;
+}
+
+nav {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 0;
+  position: relative;
+}
+
+body:not(.index) nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw;
+  min-width: 100vw;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 4.5rem;
+  color: #fff;
+  font-family: 'MonumentExtended', serif; /* Puedes cambiar esta fuente fácilmente */
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.seccion {
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+  border-radius: 32px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  background: none;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.seccion:hover {
+  opacity: 0.97;
+}
+
+.seccion img {
+  width: 95%;
+  height: auto;
+  min-height: 400px;
+  max-height: 600px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 32px;
+  display: block;
+  border: none;
+  box-shadow: none;
+  background: none;
+  filter: grayscale(1);
+  transition: filter 0.4s, transform 0.4s, box-shadow 0.4s;
+  margin: 0 auto;
+}
+
+.seccion:hover img {
+  filter: grayscale(0);
+  transform: scale(1.035);
+  box-shadow: 0 0 32px 0 rgba(0,0,0,0.25);
+}
+
+.seccion img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.seccion p {
+  position: relative;
+  width: 100%;
+  background: none;
+  margin: 1.2rem 0 0 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'MonumentExtended', serif;
+  font-weight: bold;
+  font-size: var(--portada-font-size, 2.2rem);
+  color: #fff;
+  border-radius: 0;
+  z-index: 1;
+  text-shadow: none;
+  display: block;
+}
+@media (max-width: 700px) {
+  .seccion p {
+    text-align: center;
+    margin: 0.7rem 0 0 0;
+    font-size: 1.2rem !important;
+  }
+  .arrow {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .arrow.left {
+    left: 0px;
+    right: auto;
+  }
+  .arrow.right {
+    right: 0px;
+    left: auto;
+  }
+}
