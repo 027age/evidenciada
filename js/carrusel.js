@@ -8,7 +8,7 @@
   let titulo = h1.innerText || h1.textContent;
   titulo = titulo.replace(/\s+/g, ' ').replace(/\s*\n\s*/g, ' ').replace(/<br\s*\/?>/gi, ' ').trim().toUpperCase();
   let imagenes = [];
-  if (titulo === 'CEMETERIO/S/' || titulo === 'CEMETERIES') {
+  if (titulo === 'CEMENTERIOS' || titulo === 'CEMETERIO/S/' || titulo === 'CEMETERIES') {
     imagenes = [
       "fotos_sueltas_varias/cementerios/c1.webp",
       "fotos_sueltas_varias/cementerios/c2.webp",
