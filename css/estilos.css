@@ -1,3 +1,11 @@
+@media (max-width: 700px) {
+  .contacto-titulo {
+    font-size: 4.5rem !important;
+  }
+}
+.contacto-titulo {
+  font-size: 4.5rem !important;
+}
 @font-face {
   font-family: 'MonumentExtended';
   src: url('fonts/MonumentExtended-Regular.woff2') format('woff2');
